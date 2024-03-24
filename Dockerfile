@@ -1,10 +1,10 @@
-FROM ubuntu:24.04
+FROM ubuntu:16.04
 
 # Update and install OpenSSH server
 RUN apt-get update && apt-get install -y openssh-server nano git
 
 # Create a directory for sshd to run
-# RUN mkdir /var/run/sshd
+RUN mkdir /var/run/sshd
 
 # Set root password
 RUN echo 'root:wibu' | chpasswd
