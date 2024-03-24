@@ -16,7 +16,7 @@ RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 # Expose SSH port
-EXPOSE 22
+# EXPOSE 22
 
 # Switch to root user
 USER root
